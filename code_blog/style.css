@@ -1,6 +1,16 @@
 	/*Body*/
-body { font-family: sans-serif; color: Saddlebrown; background-color: LightGray }
+body { font-family: sans-serif; 
+      color: White;
+      background: linear-gradient(to top left, #FD8529 0%, #0A213B 130%);
+      }
+/* Links */
+a:visited{color:lightblue;}
+
+
+
+
 	/*Header 1's in the Body*/
+}
 h1 { text-align: center }
 	/*Header 2's in the Body*/
 h2 {text-align: center;}
@@ -34,12 +44,17 @@ body>header>nav>ul>li>a {
     color: White;
     text-decoration: none;
 }
+
 /* Table Properties */
 table, th, td {
-  border: 1px solid black;
+  padding: 10px 10px 10px 10px;
+  border: 3px solid black;
   border-collapse: collapse;
-  color:darkred;
+  color:#0A213B;
 }
 thead {color:green;}
 tbody {color:blue;}
 tfoot {color:red;}
+
+/* Link Properties */
+
