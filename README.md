@@ -1,6 +1,5 @@
 # cse322
 Web Page Programming Repo
-TEST FOR AN EDITED AND COMMIT FROM TERMINAL
 
 
 
