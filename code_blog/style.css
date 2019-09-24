@@ -1,0 +1,45 @@
+	/*Body*/
+body { font-family: sans-serif; color: Saddlebrown; background-color: LightGray }
+	/*Header 1's in the Body*/
+h1 { text-align: center }
+	/*Header 2's in the Body*/
+h2 {text-align: center;}
+	/*Centering an Image*/
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 40%;*/
+}
+
+.text-center{
+	text-align: center;
+}
+
+/*Navigation Menu*/
+body { margin: 0; }
+body>header { text-align: center; }
+body>header>nav>ul {
+    margin: 0px;
+    padding: 0px;
+    background-color: DimGray;
+    list-style-type: ;
+}
+body>header>nav>ul>li { display: inline-block; }
+body>header>nav>ul>li:hover { background-color: MidnightBlue; }
+body>header>nav>ul>li:active { background-color: Blue; }
+body>header>nav>ul>li>a {
+    display: block;
+    padding: 1em;
+    color: White;
+    text-decoration: none;
+}
+/* Table Properties */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color:darkred;
+}
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
