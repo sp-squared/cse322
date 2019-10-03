@@ -1,11 +1,69 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>TEST</title>
-</head>
-<body>
+	<head>
+		<title> HTTP </title>
+		<!-- Internal CSS-->
+		<style type="text/css">
+			body{
+				background-color: yellow;
+				color: black;
+				}
+		</style>
+	</head>
+	<body>
+		<div style="text-align: center;">
+				<div style="background-color: green; display: inline-block; text-align: center; color: lightblue;">
+				<h1>Lecture 2: "HTTP"</h1>
+				</div>
+		</div>
+		<p>
+			GET method is invoked first when a webpage is first loaded. Host header is followed by the GET and is required!  
+		</p>
+		<ol>
+			<li>GET (WHAT YOU ARE GETTING)</li>
+				<p> ex. GET/index.html HTTP/1.1 </p>
+			<li>HOST (WHERE ARE YOU GETTING)</li>
+				<p> ex. Host: localhost:9999</p>
+				<p> --> local host on port 9999</p>
+			<li>Connection (ACTIVE?)</li>
+		</ol>
 
-	<h1>HIIII</h1>
+	<hr>
 
-</body>
+	<!-- Line Break for next section-->
+	
+	<p>
+	Node Net Module allows you to create a "socket" that represents a TCP connection with two points. 
+
+	<ol>
+		<li>Use Connect function to establish a TCP connection</li>
+		<p>
+			const socket = net.connect(9999, 'localhost');
+		</p>
+		<li>Use socket event listener and listen to "connect event". Then run the function</li>
+		<p>
+			socket.on("connect", onConnect);
+		</p>
+		<li>Create function onConnect which logs a message "connected" then writes the headers of the webpage</li>
+		<p>
+			function onConnect(){<br>
+			console.log('connected');<br>
+			socket.write(httpResponseMessage, 'ascii');<br>
+			}
+		</p>
+		<li>Create function processResponse which will take contentd of the response header and output to screen</li>
+		<p>
+			function processResponse(httpResponseMessage){<br>
+			console.log(httpResponseMessage.toString());<br>
+			socket.end();<br>
+			}
+		</p>
+	</ol>
+
+	</p>
+
+
+
+
+
+	</body>
 </html>
