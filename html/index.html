@@ -1,24 +1,51 @@
 <!DOCTYPE html>
-<html>	<!-- <html> = Parent element -->
-	<head>	<!-- <head> and <body> are child elements of <html> -->
-		<title>HTML</title>
+<!-- <html> = Parent element -->
+<html>
+	
+	<!-- <head> and <body> are child elements of <html> -->
+	<head>
+		<title> HTML </title>
 		<!-- Internal CSS-->
 		<style type="text/css">
 			body{
-				background-color: orange;
+				background-color: yellow;
 				}
+				#center_image{
+					display: block;
+					text-align: center;
+
+				}
+
 		</style>
 
 	</head>
 	<body>
 		<div style="text-align: center;">
 				<div style="background-color: green; display: inline-block; text-align: center; color: lightblue;">
-				<h1>Lecture 3: "HTML"</h1>
+				<h1> Lecture 3: "HTML" </h1>
 				</div>
 		</div>
 
-		<a href="https://csusb.edu"> CSUSB Website </a> <!-- How to create a Hyperlink with HTML-->
+		<!-- Using the <div> tag and a CSS ID to center an image-->
+		<div id="center_image">
+			<img src="images/csusb.png" alt="CSUSB" style="">
+		</div>
 
+		<!-- How to create a Hyperlink with HTML-->
+		<a href="https://csusb.edu" target="_blank"> CSUSB Website </a>
+
+		<ol>
+		<li><p> target = "_blank" in a hyperlink will open the link in a new window or new tab.</p></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		</ol>
+
+		<form>
+			<input type="text" name="Username"><br>
+			<input type="password" name="Password">
+		</form>
 
 
 
