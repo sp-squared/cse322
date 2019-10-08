@@ -1,19 +1,26 @@
-	/*Body*/
+/*Body*/
 body { font-family: "Lucida Console"; 
       color: White;
       background: linear-gradient(to top left, #FD8529 0%, #0A213B 130%);
     }
+
+
 /* Links */
 a:visited{color:lightblue;}
 
+
 /*Header 1's in the Body*/
-h1 { text-align: center 
+h1 { text-align: center;
       font-family: "courier new";
     }
+
+
 /*Header 2's in the Body*/
 h2 {text-align: center;
     font-family: "Courier New";
   }
+
+
 /*Centering an Image*/
 .img {
   display: block;
@@ -21,9 +28,12 @@ h2 {text-align: center;
   margin-right: auto;
   }
 
+
+/* Class to center text */
 .text-center{
 	text-align: center;
 }
+
 
 /*Navigation Menu*/
 body { margin: 0;  }
