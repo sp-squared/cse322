@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LECTURE 6</title>
+	<style>
+		img{
+			width: 128px;
+		}
+	</style>
+</head>
+<body>
+	<img src="flower1.jpg" id="flower">
+	<script>
+	// function() makes sure it is not in the "global name space"
+	(function () {
+			// boolean marker to toggle between flower1 and flower2
+			let flowerImageChecked = false;
+			// toggleFlower definition
+			function togglerFlower() {
+				console.log("togglerFlower called!");
+			}
+			let flowerImage = document.getElementById('flower');
+			flower.addEventListener('click', togglerFlower);
+
+
+			if (flowerImageChecked = false) {
+				flowerImage.src = "flower1.jpg";
+
+			}else{
+				flowerImage.src = "flower2.jpg";
+
+
+			}
+	})();
+
+
+		let flowerImage = document.getElementById('flower');
+		flower.addEventListener('click', togglerFlower);
+
+
+	</script>
+
+
+
+</body>
+</html>
