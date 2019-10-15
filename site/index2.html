@@ -1,0 +1,31 @@
+<html>
+<head>
+	<style>
+		img {
+			width: 128px;
+			height: 128px;
+		}
+	</style>
+</head>
+<body>
+	<img id = "flowerImage"src = "flower1.jpg">
+
+
+
+
+
+<script>
+	(function(){
+		window.y = 3;
+		function toggleFlower(){
+			flowerImage.src = "flower2.jpg";
+		}
+
+		let flowerImage = document.getElementById('flowerImage');
+		flowerImage.addEventListener('click', toggleFlower);	
+	})();
+</script>
+
+
+</body>
+</html>
