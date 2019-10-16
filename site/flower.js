@@ -1,18 +1,4 @@
-<html>
 
-<!-- 
-Colin Morris-Moncada
-CSE 322 Web Page Programming
-Lecture 6
--->
-
-<head>
-<meta charset="UTF-8">
-<meta name="description" content="Lecture 6">
-<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-<meta name="author" content="Colin Morris-Moncada">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
 <style>
 	* {
 		/* border:1px solid red; */
