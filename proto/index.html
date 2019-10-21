@@ -1,0 +1,52 @@
+<html>
+
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 7
+--> 
+
+<script>
+	// Declaring o1 object
+	const o1 = {};
+
+	// "f" references to a function that returns value 3
+	o1.f = function(){
+		return 3;
+	}
+
+	// Declaring o2 object with pre-existing Object class
+	// Inherits all functions and all attributes from o1
+	// PROTOTYPING
+	const o2 = Object.create(o1);
+
+	// "g" references to a function that returns value 9
+	o2.g = function(){
+		return 9;
+
+	}
+
+	// JS looks at object before the prototype
+	o2.f = function(){
+		return 99;
+	}
+
+
+	// o1.f is a pointer or a "reference"
+	// Similiar to Polymorphism of classes in C++ 
+	// o2 "inherits" reference f from o1
+
+	//o2.f = o1.f;
+
+	// log message 
+	console.log(o1.f());
+	console.log(o2.f());
+
+	// === is a more strict type; not allowing type conversion
+	// assertion examples
+	console.assert(o1.f() === 3 );	
+	console.assert(o2.f() === 99 );
+	console.assert(o2.__proto__ === o1);
+	
+</script>
+<html>

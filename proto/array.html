@@ -1,0 +1,29 @@
+<html>
+
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 7
+--> 
+
+<script>
+	const o1 = {};
+	o1.f = function(){
+		return 3;
+
+	}
+	
+	
+	const a = [Object.create(o1), Object.create(o1)];
+
+
+	// strings are immutable
+	// immutable meaning you cannot make two same exact instances of a string or number
+	const b = ["ddd", "ddd"];
+
+
+	console.assert(a[0] === a[1]);
+	console.assert(b[0] === b[1]);
+
+</script>
+</html>
