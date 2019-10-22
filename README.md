@@ -13,7 +13,6 @@ Lecture 9  10/21 ""
 Lecture 10 10/23 ""
 Lecture 11 10/28 ""
 Lecture 12 10/30 ""
-
 Lecture 13 11/4  ""
 Lecture 14 11/6  ""
 Lecture 15 11/11 ""
