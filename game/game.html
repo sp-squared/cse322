@@ -1,0 +1,66 @@
+<html>
+
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 8 "Canvas Animation"
+--> 
+
+<style>
+* {
+	border: 1px green dashed;
+}
+
+body{	/* TOP RIGHT BOTTOM LEFT*/
+	margin: 100px 
+	}
+
+
+</style>
+
+
+<canvas id = "fps" width ="400" height = "300"/>
+
+<script>
+
+// Defines a locally scoped function
+(function(){
+	const canvas = document.getElementById('fps');
+	const ctx    = canvas.getContext('2d');
+	
+	//Defines variables used
+	let x = 0;
+	let y = 0;
+	let t = performance.now() / 1000;
+	let fps = 60;
+	
+	// Defines the draw function
+	function draw(millis){
+		let dt = millis / 1000 -t;
+		t = millis / 1000;
+		// Creates a moving average
+		fps = .99 * fps + .01 / dt;
+		
+		ctx.fillStyle = 'white';
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		ctx.fillStyle = 'blue';
+		ctx.fillRect(x, y, 110, 100);
+		x += 145 * dt;
+		y += 100 * dt;
+		
+		ctx.fillStyle = 'orange';
+		ctx.font ="24px Arial";
+		ctx.fillText('' + fps, 20, 50);
+		
+		// calls after 1st frame
+		requestAnimationFrame(draw); 
+	}
+	
+	// calls on 1st frame
+	requestAnimationFrame(draw); 
+	
+})();
+
+
+</script>
+</html>
