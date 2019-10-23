@@ -1,0 +1,1 @@
+Notes for Lecture 2 "HTTP"
