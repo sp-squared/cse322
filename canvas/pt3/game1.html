@@ -1,0 +1,78 @@
+<html>
+
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 9 "Canvas Game Implementation Pt. 2"
+--> 
+
+<style>
+* {
+	border: 1px green dashed;
+}
+
+body{	/* TOP RIGHT BOTTOM LEFT*/
+	margin: 100px 
+	}
+
+
+</style>
+
+
+<canvas id = "game" width ="400" height = "300"/>
+
+<script>
+
+//--------------------------------------------------------------------------------------//
+
+// Defines a locally scoped function
+(function(){
+	const canvas = document.getElementById('game');
+	const ctx    = canvas.getContext('2d');
+	
+	// Suppose we want to show text on screen
+	function createText(text, x, y, color, font){
+		// o is the variable to refer to the text object
+		let o = {};
+		// Default Constructor setting member  variables
+		o.text = text;
+		o.x = x;
+		o.y = y;
+		o.color = color;
+		o.font = font;
+	
+		// QUESTION FOR PROF. "What is t refering to ?"
+		o.draw = function(t){
+			ctx.fillStyle = this.color;
+			ctx.font = this.font;
+			ctx.fillText(this.text, this.x, this.y);
+		}
+		return o;
+	}
+	
+	// Defines two game objects of text
+	const helloText = createText("Привет", 20, 50, 'orange', '30px Arial');
+	const byeText = createText("до свидания", 200, 150, 'blue', '20px Arial');
+	
+	//Defines variables used
+	let t = performance.now() / 1000;
+	
+//--------------------------------------------------------------------------------------//
+
+	// Defines the draw function
+	function draw(millis){
+		const dt = millis / 1000 -t;
+		t = millis / 1000;
+		helloText.draw(dt);
+		byeText.draw(dt)
+		}
+//--------------------------------------------------------------------------------------//	
+	
+	// calls on 1st frame
+	requestAnimationFrame(draw); 
+
+})();
+
+
+</script>
+</html>

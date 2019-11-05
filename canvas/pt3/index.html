@@ -1,0 +1,35 @@
+<html>
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 9 "Canvas Code for a.js"
+--> 
+<head>
+<style>
+	* {
+		border: 2px green dashed;
+	}
+
+	body{	/* TOP RIGHT BOTTOM LEFT*/
+		margin: 100px 
+	}
+	</style>
+</head>
+
+<body>
+	<canvas id = "game" width ="700" height = "420"/>
+	<script src="a.js"></script>
+	<script>
+		(function(){
+			const t1  = new a.Text("Hi!", 100, 60, 'orange', '52px Arial');
+			const t2  = new a.Text("Goodbye!", 200, 60, 'blue', );
+			const t3  = new a.Text("House!", 300, 60, '', '52px Arial');
+			const box = new a.Box (200, 200 ,200,120, "gold", '');
+			a.objs.push(box);
+			a.objs.push(t1);
+			a.objs.push(t2);
+			a.objs.push(t3);
+		})();
+	</script>
+</body>
+</html>
