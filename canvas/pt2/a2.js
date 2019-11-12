@@ -28,7 +28,7 @@ Lecture 9 "Canvas Javascript Application Code Only"
 	}
 
 	function Box(x, y, w, h, color) {
-		this.x     = x     || 0            ;
+	this.x     = x     || 0            ;
     	this.y     = y     || 0            ;
     	this.w     = w     || 100          ;
     	this.h     = h     || 50           ;
@@ -39,14 +39,6 @@ Lecture 9 "Canvas Javascript Application Code Only"
 			ctx.fillStyle = this.color;
 			ctx.fillRect = (this.x, this.y, this.w, this.h);
 	}
-
-
-
-
-
-
-
-
 
 	// Defines two game objects of text
 	const t1 = new Text("Hi!", 100, 60, 'orange', '30px Arial');

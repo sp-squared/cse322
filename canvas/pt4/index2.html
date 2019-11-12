@@ -1,0 +1,68 @@
+<html>
+<!-- 
+Colin Morris-Moncada
+CSE 322 Web Page Programming
+Lecture 11 "Canvas Code for a.js"
+
+Missile Projectile and Collision with other objects
+	-- Shooter
+	-- + Collision
+--> 
+<head>
+<style>
+	* {
+		border: 2px green solid;
+	}
+
+	body{	/* TOP RIGHT BOTTOM LEFT*/
+		margin : 0px;
+		padding: 0px;
+	}
+	canvas{
+		position: fixed ;
+		top     : 0px   ;
+		left    : 0px   ;
+		opacity : 1     ;
+		z-index : 1     ;
+
+	}
+
+
+	</style>
+</head>
+
+<body>
+	<canvas id = "game" width ="700" height = "420"></canvas>
+	<h1> Missile Game </h1>
+	<script src="a2.js"></script>
+	<script>
+		(function(){
+			//const t = new a.text("Hello! ", 100,50,undefined,undefined);
+			//a.objs.push(new a.Missile);
+			const canvas = document.getElementById("game");
+			canvas.addEventListener('click', function(e){
+				a.objs.push(new a.Missile(e.y));
+				console.log(e.x + " " + e.y);
+			});
+
+
+
+			a.enemies = [];
+			function enemy (){
+				let x = 300 + Math.random() * 300;
+				let y = 70 + Math.random()  * canvas.height - 70;
+				let w = 30 ;
+				let h = 30 ;
+
+				const box = new a.Box(x,y,w,h, 'green');
+				a.objs.push(box);
+				a.enemies.push(box);
+				setTimeout(enemy, 1000 +  Math.random() * 4000);
+			}
+
+			setTimeout(enemy, 2000);
+
+		})();
+	</script>
+</body>
+</html>

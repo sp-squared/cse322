@@ -1,7 +1,8 @@
 /* 
 Colin Morris-Moncada
 CSE 322 Web Page Programming
-Lecture 9 "Canvas Javascript Application Code Only"
+Lecture 10 "Canvas Javascript Application Code Only"
+Bit from end of Lecture 9
 */ 
 
 
@@ -19,14 +20,14 @@ Lecture 9 "Canvas Javascript Application Code Only"
 		this.x	   = x     || 0		      ;
 		this.y     = y     || 0		      ;
 		this.color = color || "#000000"   ;
-		this.font  = font  || "12px serif";
+		this.font  = font  || "24px serif";
 	}
 
 	// Text attachment of Draw Method
 	Text.prototype.draw = function(dt){
-		ctx.fillStyle   = this.color                 ;
-		ctx.font        = this.font                  ;
-		ctx.fillText    (this.text, this.x, this.y);
+		ctx.fillStyle   = this.color;
+		ctx.font        = this.font;
+		ctx.fillText(this.text, this.x, this.y);
 	}
 
 
@@ -40,16 +41,30 @@ Lecture 9 "Canvas Javascript Application Code Only"
   	}
 
   	// Box attachment of Draw Method
-	Box.prototype.draw    = function(dt){
-			ctx.fillStyle = this.color                      ; 
-			ctx.fillRect  (this.x, this.y, this.w, this.h);
+	Box.prototype.draw = function(dt){
+		ctx.fillStyle = this.color; 
+		ctx.fillRect(this.x, this.y, this.w, this.h);
 	}
 
+	// Missile Constructor
+	function Missile() {
+		this.x = 0     ;
+		this.y = 100   ;
+		this.w = 50    ;
+		this.h = 50    ;
+  	}
+
+	// Missile attachment of Draw Method
+	Missile.prototype.draw = function(dt){ 
+		this.x += 200 * dt; 
+		ctx.fillStyle = '#000000'; 
+		ctx.fillRect  (this.x, this.y, this.w, this.h);
+	}
 
 	// Set's t to initial
 	let t = 0; 
 
-	// Array of objects                                                ;
+	// Array of objects                                                
 	const objs = [];
 
 
@@ -57,11 +72,12 @@ Lecture 9 "Canvas Javascript Application Code Only"
 	function loop(millis){
 		// computes elapsed time since last frame
 		const dt = millis / 1000 -t;
-		t = millis / 1000          ;
+		t = millis / 1000;
 		
 	
 	//clear viewport
 	ctx.fillStyle = 'white';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 	// draw game objects
 		for (let i = 0; i < objs.length; ++i){
@@ -70,19 +86,20 @@ Lecture 9 "Canvas Javascript Application Code Only"
 		}
 
 	//continue loop
-	//requestAnimationFrame(loop);
+	requestAnimationFrame(loop);
 	} 
 
 	// start loop
 	requestAnimationFrame(function(millis){
-		t = millis/1000            ;
+		t = millis/1000;
 		requestAnimationFrame(loop);
     });
 
 // Attach to (a) to make them globally scoped 
-a.Box = Box;
-a.Text = Text;
-a.objs = objs;
+ 	a.objs     = objs     ;
+  	a.Text     = Text     ;
+  	a.Box      = Box      ;
+  	a.Missile  = Missile  ;
 
 
 // end of locally scoped function

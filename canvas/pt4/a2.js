@@ -1,7 +1,7 @@
 /* 
 Colin Morris-Moncada
 CSE 322 Web Page Programming
-Lecture 10 "Canvas Javascript Application Code Only"
+Lecture 11 "Canvas Javascript Application Code Only"
 */ 
 
 
