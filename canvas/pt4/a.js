@@ -6,7 +6,9 @@ Lecture 11 "Canvas Javascript Application Code Only"
 
 
 // Defines a locally scoped function
+console.log("1");
 (function(){
+	console.log("1.5");
 	// application object
 	window.a ={};
 	const ctx    = a_canvas.getContext('2d', {alpha:false});
