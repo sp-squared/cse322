@@ -17,19 +17,19 @@ Tues & Thurs
 * Lecture 8  	10/16 "Canvas Animation Pt. 1"
 * Lecture 9  	10/21 "Canvas Animation Pt. 2"
 * Lecture 10 	10/23 "Canvas Animation Pt. 3" 
-* Lecture null  10/28 "N/A" 		--> Class Canceled
+* Lecture null  10/28 "N/A" 		    --> Class Canceled
 * Lecture null 	10/30 "N/A"            	--> Class Canceled
 * Lecture 11 	11/4  "Canvas Animation Pt. 4"
 * Lecture 12 	11/6  "Canvas Animation Pt. 5"
 * Lecture null 	11/11 "Veterans Day"	--> Class Canceled
-* Lecture 13 	11/13 ""
-* Lecture 14 	11/18 ""
-* Lecture 15 	11/20 ""
-* Lecture 16 	11/25 ""
-* Lecture 17 	11/27 ""
-* Lecture 18 	12/2  ""
+* Lecture 13 	11/13 "No Youtube Video"
+* Lecture 14 	11/18 "Arrays"
+* Lecture 15 	11/20 ""                --> SHOW SOMETHING IN LAB
+* Lecture 16 	11/25 ""                --> SHOW SOMETHING IN LAB
+* Lecture 17 	11/27 ""                --> SHOW SOMETHING IN LAB
+* Lecture 18 	12/2  ""                --> SHOW SOMETHING IN LAB
 
-* Final 	   12/4 
+* Final 	   12/4                     --> MAKE SURE TO GET A IN CLASS
 
 
 
