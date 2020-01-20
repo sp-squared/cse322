@@ -1,11 +1,13 @@
 # cse322
 Web Page Programming Repo
 
+```
 CSE 322 
 Fall 2019
 David Turner
 Tues & Thurs 
 4:00 - 5:15 
+```
 
 * Lecture 1  	9/23  "Introduction"
 * Lecture 2     9/25  "HTTP"
