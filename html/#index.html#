@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- <html> = Parent element -->
+<html>
+	
+	<!-- <head> and <body> are child elements of <html> -->
+	<head>
+		<title> HTML </title>
+		<!-- Internal CSS-->
+		<style type="text/css">
+
+			body{background-color: yellow;} 
+			#center_image{
+				display: block;
+				text-align: center;
+				}
+		</style>
+
+	</head>
+	<body>
+		<div style="text-align: center;">
+				<div style="background-color: green; display: inline-block; text-align: center; color: lightblue;">
+				<h1> Lecture 3: "HTML" </h1>
+				</div>
+		</div>
+
+		<!-- Using the <div> tag and a CSS ID to center an image-->
+		<div id="center_image">
+			<img src="images/csusb.png" alt="CSUSB" style="">
+		</div>
+
+		<ol>
+		<li><p> target = "_blank" in a hyperlink will open the link in a new window or new tab.</p></li>
+
+		<!-- How to create a Hyperlink with HTML-->
+		<a href="https://csusb.edu" target="_blank"> CSUSB Website </a>
+
+		<li><p> Forms can be used to collect user input. There are different types of forms as illustrated below.</p></li>
+		<form>
+			<input type="text" name="Username"><br>
+			<input type="password" name="Password">
+		</form>
+		<hr>
+		<form>
+			<input type="radio" name="gender" value="Male"> Male <br>
+			<input type="checkbox" name="gender" value="Female"> Female <br>
+
+		</form>
+
+
+		<li></li>
+		<li></li>
+		<li></li>
+		</ol>
+
+	</body>
+</html>
